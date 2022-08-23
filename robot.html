@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Evil Dr. Quizenberry</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="css/bootstrap.min.css" rel="stylesheet"  >
+<script src="js/bootstrap.bundle.min.js" ></script>
+<script src="js/jquery-3.6.0.min.js" ></script>
+
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+</head>
+<body>
+
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+ 
+
+  <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">CRACK THE CODE</h2>
+   
+    <p class="w3-justify">Intructions.</p>
+    
+		
+		<form>
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <input type="email" id="form2Example1" class="form-control" disabled value="DrQuizenberry@mail.mil" />
+    <label class="form-label" for="form2Example1">Email address</label>
+  </div>
+
+	<div class="container">
+  <div class="row">
+    <div class="col" id="firstPass">
+		 <input type="text" id="pass1" class="form-control inputs" maxlength="1"  />
+		</div>
+   <div class="col">
+		 <input type="text" id="pass2" class="form-control inputs" maxlength="1"  />
+		</div>
+    <div class="col">
+		 <input type="text" id="pass3" class="form-control inputs" maxlength="1"  />
+		</div>
+    <div class="col">
+		  <input type="text" id="pass4" class="form-control inputs" maxlength="1"  />
+		</div>
+		<div class="col">
+		  <input type="text" id="pass5" class="form-control inputs" maxlength="1"  />
+		</div>
+   <div class="col">
+		  <input type="text" id="pass6" class="form-control inputs" maxlength="1"  />
+		</div>
+   <div class="col">
+		  <input type="text" id="pass7" class="form-control inputs" maxlength="1"  />
+		</div>
+   <div class="col">
+		 <input type="text" id="pass8" class="form-control inputs" maxlength="1"  />
+		</div>
+		<div class="col">
+		 <input type="text" id="pass9" class="form-control inputs" maxlength="1"  />
+		</div>
+    <div class="col">
+		  <input type="text" id="pass10" class="form-control inputs" maxlength="1"  />
+		</div>
+    <div class="col">
+		 <input type="text" id="pass11" class="form-control inputs" maxlength="1"  />
+		</div>   
+  </div>
+
+</div>
+	
+	
+	
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <label class="form-label" for="form2Example2">Password</label>
+  </div>
+	
+	  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <label class="form-label" for="form2Example2" id="feedback" style="color:red;"></label>
+  </div>
+
+  <!-- 2 column grid layout for inline styling -->
+  <div class="row mb-4">
+    <div class="col d-flex justify-content-center">
+      <!-- Checkbox -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+        <label class="form-check-label" for="form2Example31"> Remember me </label>
+      </div>
+    </div>
+
+    <div class="col">
+      <!-- Simple link -->
+      <a href="#!" onclick="forgetpass()">Forgot password?</a>
+    </div>
+  </div>
+
+  <!-- Submit button -->
+  <button type="button" class="btn btn-primary btn-block mb-4" onclick="signin()">Sign in</button>
+
+
+</form>
+		
+		
+		
+	
+  </div>
+
+  
+
+
+
+
+<!-- End Page Content -->
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="#" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+
+
+console.log("dddd");
+$(".inputs").keyup(function () {
+
+    if (this.value.length == this.maxLength) {
+		
+			console.log($(this).parent().next());
+      var $next = $(this).parent().next();
+			
+			var $nextInput = $next.find(".inputs");
+			
+			console.log($nextInput);
+      if ($nextInput.length)
+          $nextInput.focus();
+      else
+          $(this).blur();
+    }
+});
+
+
+function forgetpass() {
+		$("#feedback").text("Empowering those around you to be heard and valued makes the difference between a leader who simply instructs and one who inspires. - Adena Friedman").css( "color", "red" );
+}
+
+function signin() {
+	var p1 = $("#pass1").val();
+	var p2 = $("#pass2").val();
+	var p3 = $("#pass3").val();
+	var p4 = $("#pass4").val();
+	var p5 = $("#pass5").val();
+	var p6 = $("#pass6").val();
+	var p7 = $("#pass7").val();
+	var p8 = $("#pass8").val();
+	var p9 = $("#pass9").val();
+	var p10 = $("#pass10").val();
+	var p11 = $("#pass11").val();
+	
+	var passCorrect = true;
+	if (p1.toLowerCase() != "l") {
+		passCorrect = false;
+		$("#pass1").val("");
+	}
+	if (p2.toLowerCase() != "e") {
+		passCorrect = false;
+		$("#pass2").val("");
+	}
+	if (p3.toLowerCase() != "a") {
+		passCorrect = false;
+		$("#pass3").val("");
+	}
+	if (p4.toLowerCase() != "d") {
+		passCorrect = false;
+		$("#pass4").val("");
+	}
+	if (p5.toLowerCase() != "e") {
+		passCorrect = false;
+		$("#pass5").val("");
+	}
+	if (p6.toLowerCase() != "r") {
+		passCorrect = false;
+		$("#pass6").val("");
+	}
+	if (p7.toLowerCase() != "s") {
+		passCorrect = false;
+		$("#pass7").val("");
+	}
+	if (p8.toLowerCase() != "h") {
+		passCorrect = false;
+		$("#pass8").val("");
+	}
+	if (p9.toLowerCase() != "i") {
+		passCorrect = false;
+		$("#pass9").val("");
+	}
+	if (p10.toLowerCase() != "p") {
+		passCorrect = false;
+		$("#pass10").val("");
+	}
+	if (p11.toLowerCase() != "!") {
+		passCorrect = false;
+		$("#pass11").val("");
+	}
+	
+	
+	if (passCorrect) {
+		$("#feedback").text("The best solution to a problem is usually the easiest one. The combo is 36-10-4").css( "color", "green" );
+	} else {
+		$("#feedback").text("WRONG. Please TRY AGAIN ! ").css( "color", "red" );
+		pass1.focus();
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
